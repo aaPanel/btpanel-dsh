@@ -1,0 +1,11 @@
+- insert:
+    - id: bt-panel-theme-settings
+      name: dsh-bt-panel-theme/settings
+      config:
+        panelUrl: ''
+        apiKey: ''
+        verifySsl: true
+        timeoutMs: 10000
+
+    - id: bt-panel-theme
+      name: dsh-bt-panel-theme

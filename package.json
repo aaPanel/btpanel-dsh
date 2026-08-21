@@ -1,0 +1,71 @@
+{
+  "name": "dsh-bt-panel-theme",
+  "version": "0.0.1",
+  "description": "A BT Panel-themed DeepSeek Harness integration with an embedded panel and automatic login.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./config": "./config.js",
+    "./settings": "./settings.js",
+    "./embed": "./embed.js",
+    "./typert": "./typert.host.js",
+    "./bt-client": "./bt-client.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "config.js",
+    "settings.js",
+    "embed.js",
+    "typert.host.js",
+    "bt-client.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "bt-panel",
+    "baota",
+    "theme",
+    "embed",
+    "proxy"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-typert-protocol": "^0.1.0-rc.7",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.7",
+    "@deepseek-ai/dsh-client-ui-settings": "^0.1.0-rc.7",
+    "@deepseek-ai/dsh-client-ui-settings-plugins": "^0.1.0-rc.7",
+    "@deepseek-ai/dsh-client-ui-theme": "^0.1.0-rc.7",
+    "react": "^18.2.0"
+  }
+}
