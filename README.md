@@ -25,8 +25,8 @@
 ## 安装
 
 ```bash
-git clone https://github.com/<your-github-username>/deepseek-harness-bt-panel-theme.git
-dsh plugin --profile web add ./deepseek-harness-bt-panel-theme
+git clone https://github.com/aaPanel/btpanel-dsh.git
+dsh plugin --profile web add ./btpanel-dsh
 dsh web
 ```
 
